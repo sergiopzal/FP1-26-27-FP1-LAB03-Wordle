@@ -55,7 +55,7 @@ def test_obtener_pistas():
     assert obtener_pistas("casar", "secta") == "A_A_A"
     assert obtener_pistas("casar", "sacar") == "AVAVV"
     assert obtener_pistas("casar", "peras") == "__AVA"
-    
+
 test_obtener_pistas()
 test_marcar_amarillos()
 test_marcar_verdes()

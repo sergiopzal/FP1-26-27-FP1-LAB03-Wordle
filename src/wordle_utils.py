@@ -40,15 +40,12 @@ def calcula_minutos_y_segundos(inicio: datetime, fin: datetime) -> tuple:
 
 def quitar_letras(cadena:str, caracter:str)-> str:
     res = ''
-    aparicion = ''
+    aparicion = True
     for l in cadena:
-        if aparicion == '':
-            if l != caracter:
+            if l != caracter or not aparicion:
                 res = res + l
             else:
-                aparicion += l
-        else:
-            res = res + l
+               aparicion = False
     return res
 
 
@@ -87,5 +84,5 @@ def obtener_pistas(palabra_secreta: str, intento: str) -> str:
     verdes, restantes = marcar_verdes(palabra_secreta,intento)
     res = marcar_amarillos(intento,verdes,restantes)
     return res
-
+print(quitar_letras('casar','a'))
 
